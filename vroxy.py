@@ -40,7 +40,7 @@ class YTDLProxy(web.View):
         res = web.Response(status=500)
         try:
             url = await resolveUrl(self.request.query)
-            res = web.Response(status=307, headers={"Location": url})
+            res = web.json_response(url, status=200)
         except Error400BadRequest:
             res = web.Response(status=400)
         except Error403Forbidden:

@@ -1,5 +1,4 @@
-*
-
+!app
 !config
 !*.py
 !requirements.txt
